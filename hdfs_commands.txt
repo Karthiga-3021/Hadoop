@@ -1,0 +1,93 @@
+                                             HDFS COMMANDS
+			                    ===============
+
+Working Commands:
+=================
+1.MoveFromLocal :
+    hadoop fs -moveFromLocal /home/hduser/Desktop/Emp /user/hadoop
+  (The hadoop moveFromLocal command moves a file from the Local File System to the HDFS directory )
+
+2.Mv:
+   hadoop fs -mv /user/hadoop/Emp /user/hadoop/Emp1
+  (The Mv command moves the files from the Source to Destination .First ,we have to specify the source path and then we should specify the destination path .Now the file is moved from the source to destination.)
+
+3.ls:
+   hadoop fs -ls /user/hadoop
+  (The ls command lists the list of files that are available in the hdfs)
+
+4.cat:
+   hadoop fs -cat  /user/hadoop/Emp1
+  (The cat command will display the data of the particular HDFS file.)
+
+5.Put:
+   hadoop fs -put /home/hduser/Desktop/depart /user/hadoop
+  (The put command is used for copying a single file or multiple file from the source to the destination.)
+
+6.rm:
+   hadoop fs -rm /user/hadoop/Dept
+  (The rm command is used for removing/deleting the list of files.)
+  
+7.rmr:
+   hadoop sefs -rm -r /user/hadoop/nagaaswini
+  (The -rm -r removes/deletes the files and sub-directory recursively.) 
+
+8.rmdir:
+   hadoop fs -rmdir /user/hadoop/b
+  (The -rmdir removes/deletes only the directory which are empty.)
+
+9.tail:
+  hadoop fs -tail /user/hadoop/sample
+  (The -tail displays the tail end of a text file.)
+
+10.touchz:
+    hadoop fs -touchz /user/hadoop/temp
+    hadoop fs -touchz /user/hadoop/depart
+  (The -touchz will create a file with zero-length ,else it will show a error the file is not a zero-length)
+11.getmerge:
+   hadoop fs -getmerge /user/hadoop/Emp1 /user/hadoop/depart /home/hduser/new.txt
+   hadoop fs -getmerge /user/hadoop/merge1 /user/hadoop/merge2 /home/hduser/merge.txt
+  (The -getmerge will concatenate the two files and the output will be stored in the local file system)
+12.help:
+   hadoop fs -help 
+   hadoop fs -help getmerge
+  (The -help command displays the help for the given command , if none of the commands are specified it 
+    will display help option for all the commands)
+13.mkdir:
+   hadoop fs -mkdir /user/hadoop/newfile
+  (The -mkdir is used for creating a new directory)
+
+14.lsr: 
+   hadoop fs -ls -R /user/hadoop
+  (The -ls -R will list the contents that match the specified file pattern if the pattern is not specified 
+   it displays all the files ). 
+15.get:
+   hadoop fs -get /user/hadoop/depart /home/hduser/Desktop
+  (The -get is used for copying the files to the local file system)
+16.expunge
+   hadoop fs -expunge
+   (It will empty the Trash)
+17.dus
+   hadoop fs -du -s /user/hadoop
+   (It gives the summary of file length)
+18.du
+   hadoop fs -du -h /user/hadoop/Emp1
+   (It gives the file size)
+19.df
+   hadoop fs -df /user/hadoop/
+   (It displays the free space)
+20.cp
+   hadoop fs -cp /user/hadoop/depart /user/hadoop/bigdataa
+   (It is used to copy the given file to destination)
+21.count
+   hadoop fs -count /user/hadoop/
+   (It gives the number of files,directory and byte under the path specified)
+22.copyFromLocal
+   hadoop fs -copyFromLocal /home/hduser/Desktop/depart /user/hadoop/bigdataa
+   (It copies the file from local to hadoop file system)
+23.copyToLocal
+   hadoop fs -copyToLocal /user/hadoop/Emp1 /home/hduser/Desktop/
+   (It copies the file specified from hdfs to local file system)
+24.appendToFile
+   hadoop fs -appendToFile /home/hduser/Desktop/Emp1 /user/hadoop/depart
+   (It is used to append the given file with the target file)
+
